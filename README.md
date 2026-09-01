@@ -1,5 +1,5 @@
 
-# OXTS NVIDIA DriverWorks 5.6 Plugin
+# OXTS NVIDIA DriverWorks 7.0.3 Plugin
 
 This repository contains the compiled AArch64OXTS plugin files for [NVIDIA Drive OS](https://developer.nvidia.com/drive/driveworks)  systems. This plugin converts IMU and GNSS data from OXTS INS devices can be used within the [NVIDIA DriveWorks](https://developer.nvidia.com/drive/driveworks) ecosystem.
 
@@ -10,8 +10,8 @@ Two plugins are provided:
 
 | Plugin | File | Purpose | NVIDIA DriveWorks SDK version |NVIDIA DRIVE platform Compatibility | Supported OXTS devices |
 | --- | --- | --- | --- | --- |  --- |
-| GNSS | `liboxts_gnss_plugin.so` | Decodes OXTS NCOM data into DriveWorks GPS frames | v5.6|DRIVE AGX Orin, DRIVE AGX Pegasus | RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
-| IMU | `liboxts_imu_plugin.so` | Decodes OXTS NCOM data into DriveWorks IMU frames | v5.6|DRIVE AGX Orin, DRIVE AGX Pegasus | RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
+| GNSS | `liboxts_gnss_plugin.so` | Decodes OXTS NCOM data into DriveWorks GPS frames | v7.03 |DRIVE AGX Thor| RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
+| IMU | `liboxts_imu_plugin.so` | Decodes OXTS NCOM data into DriveWorks IMU frames | v7.03|DRIVE AGX Thor | RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
 
 
 It is important that you use the correct file for the driveworks version that you are using.  For more information on the nvdia driveworks sdk please refer to the [NVIDIA DriveWorks Documentation](https://developer.nvidia.com/drive/driveworks) 

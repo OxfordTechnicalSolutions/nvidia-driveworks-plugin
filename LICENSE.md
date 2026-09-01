@@ -1,4 +1,4 @@
-The software is protected by copyright of Oxford Technical Solutions at oxts.com. © 2008 - 2024, Oxford Technical Solutions Ltd. Unauthorised use, copying or distribution is not permitted.
+The software is protected by copyright of Oxford Technical Solutions at oxts.com. © 2008 - 2026, Oxford Technical Solutions Ltd. Unauthorised use, copying or distribution is not permitted.
 
 Any redistribution of the software must reproduce the above copyright notices, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution
 

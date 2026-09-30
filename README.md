@@ -1,5 +1,5 @@
 
-# OXTS NVIDIA DriverWorks 7.0.3 Plugin
+# OXTS NVIDIA DriveWorks 7.0.3 Plugin
 
 This repository contains the compiled AArch64OXTS plugin files for [NVIDIA Drive OS](https://developer.nvidia.com/drive/driveworks)  systems. This plugin converts IMU and GNSS data from OXTS INS devices can be used within the [NVIDIA DriveWorks](https://developer.nvidia.com/drive/driveworks) ecosystem.
 
@@ -34,24 +34,24 @@ Alternatively, you can FTP or SCP the plugin files onto NVIDIA machine.
 
 ### Recording Data 
 
-IMU 
+GNSS
 
 ```bash
 */path/to/driveworks/sample_gps_logger* --driver=gps.custom --params=protocol=udp,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_gnss_plugin.so"
 ```
-GNSS
+IMU
 ```bash
 */path/to/driveworks/sample_imu_logger* --driver=imu.custom --params=protocol=udp,ip=*IP address of your unit*,decoder-path="path/to/liboxts_imu_plugin.so"
 ```
 
 ### Replaying Data
 
-IMU
+GNSS
 
 ```bash
 */path/to/driveworks/sample_gps_logger* --driver=imu.virtual --params=protocol=file,file=path/to/recorded/data.bin,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_gnss_plugin.so"
 ```
-GNSS
+IMU
 ```bash
 */path/to/driveworks/sample_imu_logger* --driver=imu.virtual --params=protocol=file,file=path/to/recorded/data.bin,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_imu_plugin.so"
 ```

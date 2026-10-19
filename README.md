@@ -1,7 +1,7 @@
 
 # OXTS NVIDIA DriveWorks 7.0.3 Plugin
 
-This repository contains the compiled AArch64OXTS plugin files for [NVIDIA Drive OS](https://developer.nvidia.com/drive/driveworks)  systems. This plugin converts IMU and GNSS data from OXTS INS devices can be used within the [NVIDIA DriveWorks](https://developer.nvidia.com/drive/driveworks) ecosystem.
+This repository contains the compiled AArch64 OXTS plugin files for [NVIDIA Drive OS](https://developer.nvidia.com/drive/driveworks)  systems. This plugin converts IMU and GNSS data from OXTS INS devices can be used within the [NVIDIA DriveWorks](https://developer.nvidia.com/drive/driveworks) ecosystem.
 
 
 ## Contents
@@ -10,14 +10,14 @@ Two plugins are provided:
 
 | Plugin | File | Purpose | NVIDIA DriveWorks SDK version |NVIDIA DRIVE platform Compatibility | Supported OXTS devices |
 | --- | --- | --- | --- | --- |  --- |
-| GNSS | `liboxts_gnss_plugin.so` | Decodes OXTS NCOM data into DriveWorks GPS frames | v7.03 |DRIVE AGX Thor| RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
-| IMU | `liboxts_imu_plugin.so` | Decodes OXTS NCOM data into DriveWorks IMU frames | v7.03|DRIVE AGX Thor | RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
+| GNSS | `liboxts_gnss_plugin.so` | Decodes OXTS NCOM data into DriveWorks GPS frames | v7.0.3 |DRIVE AGX Thor| RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
+| IMU | `liboxts_imu_plugin.so` | Decodes OXTS NCOM data into DriveWorks IMU frames | v7.0.3|DRIVE AGX Thor | RT3000v4, RT3000v3, RT1003v2, AV200, xNAV650, xRED|
 
 
-It is important that you use the correct file for the driveworks version that you are using.  For more information on the nvdia driveworks sdk please refer to the [NVIDIA DriveWorks Documentation](https://developer.nvidia.com/drive/driveworks) 
+It is important that you use the correct file for the driveworks version that you are using.  For more information on the NVIDIA DriveWorks SDK please refer to the [NVIDIA DriveWorks Documentation](https://developer.nvidia.com/drive/driveworks) 
 
 ## INS Configuration 
-This plugin makes use of filtered accelerations which will have to be enabled when you configure your OxTS unit.  For a general guide on configuring an OxTS unit please see this [OXTS webinar](https://www.oxts.com/webinars/webinar-navconfig/)
+This plugin makes use of filtered accelerations which will have to be enabled when you configure your OXTS unit.  For a general guide on configuring an OXTS unit please see this [OXTS webinar](https://www.oxts.com/webinars/webinar-navconfig/)
 
 The acceleration filter configuration options can be found in NavConfig under the advanced tab. 
 
@@ -41,7 +41,7 @@ GNSS
 ```
 IMU
 ```bash
-*/path/to/driveworks/sample_imu_logger* --driver=imu.custom --params=protocol=udp,ip=*IP address of your unit*,decoder-path="path/to/liboxts_imu_plugin.so"
+*/path/to/driveworks/sample_imu_logger* --driver=imu.custom --params=protocol=udp,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_imu_plugin.so"
 ```
 
 ### Replaying Data
@@ -49,7 +49,7 @@ IMU
 GNSS
 
 ```bash
-*/path/to/driveworks/sample_gps_logger* --driver=imu.virtual --params=protocol=file,file=path/to/recorded/data.bin,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_gnss_plugin.so"
+*/path/to/driveworks/sample_gps_logger* --driver=gps.virtual --params=protocol=file,file=path/to/recorded/data.bin,ip=*IP address of your unit*,port=3000,decoder-path="path/to/liboxts_gnss_plugin.so"
 ```
 IMU
 ```bash
